@@ -1,0 +1,25 @@
+{
+  "name": "sky_biomeatry",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.27.2",
+    "file-type": "^17.1.1",
+    "fs": "^0.0.1-security",
+    "http": "^0.0.1-security",
+    "image-to-base64": "^2.2.0",
+    "image-type": "^4.1.0",
+    "lookup": "^0.1.0",
+    "nodemon": "^2.0.16",
+    "path": "^0.12.7",
+    "request": "^2.88.2",
+    "skybiometry": "^1.2.1",
+    "url": "^0.11.0"
+  }
+}
