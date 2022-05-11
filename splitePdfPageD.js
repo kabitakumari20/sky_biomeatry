@@ -16,7 +16,7 @@ async function splitPdf(url) {
       finalArr.push(data);
     })
   );
-
+console.log(finalArr)
   return finalArr;
 }
 console.log(
