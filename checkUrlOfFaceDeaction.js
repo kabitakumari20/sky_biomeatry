@@ -29,6 +29,9 @@ async function getdata() {
               urls: urldata[i],
             })
             .then((result) => {
+              const data = JSON.pares(result)
+              const data3 = (await data2.status) == "success" && data2.photos[0].url;
+              console.log(data3);
               console.log(result, "*************************");
               console.log("   ");
             })
@@ -55,3 +58,46 @@ async function getdata() {
 }
 
 getdata();
+
+
+
+// const config = require("./config");
+// const skybiometry = require("skybiometry");
+
+// async function getdata() {
+//   const client = new skybiometry.Client(config.apiKey, config.apiSecret);
+
+//   const Convertapi = require("convertapi")("HdyHQpcMuL44xmgr", {
+//     auth: {
+//       username: "kabita",
+//       password: "HdyHQpcMuL44xmgr",
+//     },
+//   });
+
+//   const convert = await Convertapi.convert("extract-images", {
+//     File: "https://stagingdbpscasting.fra1.cdn.digitaloceanspaces.com/3d3ddbd-158c-d08-1f-772d2571052.pdf",
+//   });
+//   const array = [];
+//   const images = convert.response.Files;
+//   const imageWithFace = await Promise.all(
+//     images.map(async (val) => {
+//       try {
+//         const imgDetect = await client.faces.detect({
+//           urls: val.Url,
+//         });
+//         const data2 = JSON.parse(imgDetect);
+
+//         if (data2.status == "success") {
+//           array.push(data2.photos[0].url);
+//         }
+//       } catch (error) {
+//         console.log(error.message);
+//       }
+//     })
+//   );
+//   console.log(array);
+// }
+// getdata();
+
+// // console.log(getdata());
+
